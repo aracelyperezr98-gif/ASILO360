@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Icono Adaptable de la App - Modo Oscuro -->
+    <color name="ic_launcher_bg">#101A2C</color>
+    <color name="ic_launcher_ring1">#21D4C2</color>
+    <color name="ic_launcher_ring2">#2563EB</color>
+    <color name="ic_launcher_dots">#FF8A65</color>
+    <color name="ic_launcher_figure">#80DEEA</color>
+    <color name="ic_launcher_heart">#F06464</color>
+    <color name="ic_launcher_hands1">#7986CB</color>
+    <color name="ic_launcher_hands2">#21D4C2</color>
+</resources>

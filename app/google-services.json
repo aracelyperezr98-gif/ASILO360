@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "30739668776",
+    "firebase_url": "https://asilo-360-default-rtdb.firebaseio.com",
+    "project_id": "asilo-360",
+    "storage_bucket": "asilo-360.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30739668776:android:53af4ec2c4285ec077ba1d",
+        "android_client_info": {
+          "package_name": "com.example.asilo360"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmbYYeaEzofa3sl0b8W45wc9Dch6IHikM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

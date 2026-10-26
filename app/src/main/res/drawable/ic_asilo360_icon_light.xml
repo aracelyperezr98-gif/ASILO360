@@ -1,0 +1,71 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Fondo circular modo claro (Mint Green / Light Teal) -->
+    <path
+        android:fillColor="#B2DFDB"
+        android:pathData="M100,0 C155.23,0 200,44.77 200,100 C200,155.23 155.23,200 100,200 C44.77,200 0,155.23 0,100 C0,44.77 44.77,0 100,0 Z" />
+
+    <!-- Anillo circular orbital externo (Mint) -->
+    <path
+        android:strokeColor="#26A69A"
+        android:strokeWidth="5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M100,35 A65,65 0 1,1 35,100" />
+
+    <path
+        android:strokeColor="#5C6BC0"
+        android:strokeWidth="5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M165,100 A65,65 0 1,1 100,35" />
+
+    <!-- Nodos naranjas conectados -->
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M100,35 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M145,55 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+    <path
+        android:strokeColor="#26A69A"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M100,35 L145,55" />
+
+    <!-- Silueta humana en el centro (Cabeza) -->
+    <path
+        android:fillColor="#5C6BC0"
+        android:pathData="M100,72 m-14,0 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0" />
+
+    <!-- Silueta humana (Cuerpo) -->
+    <path
+        android:fillColor="#5C6BC0"
+        android:pathData="M100,90 C85,90 75,105 75,120 C75,130 85,135 100,135 C115,135 125,130 125,120 C125,105 115,90 100,90 Z" />
+
+    <!-- Corazón central de cuidado (Coral Red) -->
+    <path
+        android:fillColor="#EF9A9A"
+        android:pathData="M100,128 C95,120 86,118 82,124 C77,130 82,138 100,148 C118,138 123,130 118,124 C114,118 105,120 100,128 Z" />
+
+    <!-- Manos de apoyo envolventes (Curvas protectoras) -->
+    <path
+        android:strokeColor="#5C6BC0"
+        android:strokeWidth="6"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M60,125 C60,150 80,165 100,165 C125,165 145,145 145,120" />
+
+    <path
+        android:strokeColor="#26A69A"
+        android:strokeWidth="6"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M50,110 C50,145 75,170 100,170 C130,170 155,140 155,105" />
+
+</vector>

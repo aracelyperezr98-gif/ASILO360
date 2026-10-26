@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Anillo circular orbital externo -->
+    <path
+        android:strokeColor="@color/ic_launcher_ring1"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M54,28 A26,26 0 1,1 28,54" />
+
+    <!-- Anillo secundario -->
+    <path
+        android:strokeColor="@color/ic_launcher_ring2"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M80,54 A26,26 0 1,1 54,28" />
+
+    <!-- Nodos naranjas de conexión -->
+    <path
+        android:fillColor="@color/ic_launcher_dots"
+        android:pathData="M54,28 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="@color/ic_launcher_dots"
+        android:pathData="M72,36 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+
+    <path
+        android:strokeColor="@color/ic_launcher_ring1"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:pathData="M54,28 L72,36" />
+
+    <!-- Silueta humana en el centro (Cabeza) -->
+    <path
+        android:fillColor="@color/ic_launcher_figure"
+        android:pathData="M54,42 m-5.5,0 a5.5,5.5 0 1,0 11,0 a5.5,5.5 0 1,0 -11,0" />
+
+    <!-- Silueta humana (Cuerpo) -->
+    <path
+        android:fillColor="@color/ic_launcher_figure"
+        android:pathData="M54,49 C48,49 44,55 44,61 C44,65 48,67 54,67 C60,67 64,65 64,61 C64,55 60,49 54,49 Z" />
+
+    <!-- Corazón central de cuidado -->
+    <path
+        android:fillColor="@color/ic_launcher_heart"
+        android:pathData="M54,64 C52,60 48,59 46,62 C44,65 46,68 54,73 C62,68 64,65 62,62 C60,59 56,60 54,64 Z" />
+
+    <!-- Manos de apoyo envolventes (Curvas protectoras) -->
+    <path
+        android:strokeColor="@color/ic_launcher_hands1"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M38,63 C38,73 46,79 54,79 C64,79 72,71 72,61" />
+
+    <path
+        android:strokeColor="@color/ic_launcher_hands2"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:pathData="M34,57 C34,71 44,81 54,81 C66,81 76,69 76,55" />
+
+</vector>

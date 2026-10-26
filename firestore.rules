@@ -1,0 +1,93 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Funciones auxiliares de seguridad
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/usuarios/$(request.auth.uid)).data;
+    }
+
+    function getUserRoleId() {
+      return isAuthenticated() ? getUserData().id_rol : null;
+    }
+
+    function isAdmin() {
+      return getUserRoleId() == 1;
+    }
+
+    function isStaff() {
+      return getUserRoleId() == 2;
+    }
+
+    function isFamiliar() {
+      return getUserRoleId() == 3;
+    }
+
+    // Colección: usuarios (Perfiles)
+    match /usuarios/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin() || (isAuthenticated() && request.auth.uid == userId);
+    }
+
+    // Colección: residentes (Expedientes)
+    match /residentes/{residentId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Colección: personal (Directorio de Empleados)
+    match /personal/{staffId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Colección: familiares (Registros de Familiar)
+    match /familiares/{familyId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Colección: residente_familiar (Vínculos y Permisos de Consulta)
+    match /residente_familiar/{linkId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Colección: consultas (Consultas Médicas)
+    match /consultas/{consultaId} {
+      allow read: if isAuthenticated();
+      allow create, update: if isAdmin() || isStaff();
+      allow delete: if isAdmin();
+    }
+
+    // Colección: visitas (Visitas Programadas)
+    match /visitas/{visitaId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isAdmin() || isStaff();
+    }
+
+    // Colección: pagos (Finanzas y Mensualidades)
+    match /pagos/{pagoId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Colección: notificaciones (Avisos del Asilo)
+    match /notificaciones/{notificacionId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Colección: actividades (Bitácora de Cuidado)
+    match /actividades/{actividadId} {
+      allow read: if isAuthenticated();
+      allow create, update: if isAdmin() || isStaff();
+      allow delete: if isAdmin();
+    }
+  }
+}
